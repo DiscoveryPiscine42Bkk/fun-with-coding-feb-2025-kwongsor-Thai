@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("../photo/bg3.gif") no-repeat center center fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  background-color: #8e1616;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.navbar li a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #eeeeee;
+  margin: 0 10px;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.education img {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.education img:hover {
+  transform: scale(1.2);
+}
+
+.school {
+  display: flex;
+  padding: 50px 0;
+}
+
+.school-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.school-title h3 {
+  color: #d84040;
+}
+
+.school-title p {
+  color: #eeeeee;
+}
+
+@media screen and (max-width: 768px) {
+  .education {
+    padding: 50px 20px;
+  }
+
+  .school {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .education img {
+    width: 80%;
+    height: auto;
+  }
+
+  .school-title {
+    padding-left: 0;
+  }
+
+  .navbar li a {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .education h2 {
+    font-size: 1.8rem; /* ลดขนาดตัวอักษร */
+    text-align: center;
+  }
+
+  .school {
+    flex-direction: column; /* เปลี่ยนแถวให้เป็นแนวตั้ง */
+    align-items: center;
+  }
+
+  .school-title {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .education img {
+    width: 80%;
+    height: auto;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li a {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+}

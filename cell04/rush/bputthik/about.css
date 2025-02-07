@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #1d1616;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.navbar li a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d84040;
+  margin: 0 10px;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 58px;
+  margin-top: 60px;
+}
+
+.img-about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.back-text h2 {
+  -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+  font-family: "Times New Roman", serif;
+  font-size: 3rem;
+  color: #d84040;
+  margin-top: 150px;
+  margin-bottom: 25px;
+  margin-left: 50px;
+  padding-top: 20px;
+}
+
+.img-about img {
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  border-radius: 5px;
+}
+
+.text-about {
+  width: 50%;
+}
+
+.back-text {
+  width: 500px;
+  height: 500px;
+  background-color: #eeeeee;
+  border-radius: 20px;
+  margin: 100px auto;
+}
+
+.back-text p {
+  color: #d84040;
+  font-family: "Times New Roman", serif;
+  font-size: 1.5rem;
+  margin: 20px 50px;
+}
+
+/* สำหรับหน้าจอที่มีความกว้างไม่เกิน 768px (โทรศัพท์มือถือ) */
+@media screen and (max-width: 768px) {
+  /* ปรับ navbar ให้เป็นแนวตั้ง */
+  .navbar ul {
+    flex-direction: column; /* เปลี่ยนแถวให้เป็นคอลัมน์ */
+    align-items: center; /* จัดกลาง */
+    padding: 0; /* กำหนด padding ให้พอดี */
+  }
+
+  /* ปรับขนาดตัวอักษรใน navbar ให้เล็กลง */
+  .navbar li a {
+    font-size: 1.2rem; /* ลดขนาดตัวอักษร */
+    padding: 10px 15px; /* เพิ่ม padding ให้มากขึ้น */
+  }
+
+  /* ทำให้ navbar ไม่ทับกับเนื้อหาด้านล่าง */
+  body {
+    padding-top: 80px; /* เพิ่ม padding-top ให้กับเนื้อหา */
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column; /* จัดเรียงรูปและข้อความในแนวตั้ง */
+    align-items: center; /* จัดกลางทั้งแนวนอน */
+    padding-top: 80px; /* เพิ่มระยะห่างจาก navbar */
+  }
+
+  .img-about {
+    width: 80%; /* ปรับขนาดรูปภาพให้พอดีกับหน้าจอเล็ก */
+    margin: 20px 0;
+  }
+
+  .img-about img {
+    width: 100%; /* ปรับขนาดรูปภาพให้พอดีกับพื้นที่ */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .text-about {
+    width: 80%; /* ปรับขนาดของข้อความ */
+    padding: 10px;
+  }
+
+  .back-text {
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center; /* จัดข้อความให้กลาง */
+  }
+
+  .back-text p {
+    font-size: 1rem; /* ลดขนาดตัวอักษร */
+  }
+
+  /* ปรับขนาดของหัวข้อ "About me" */
+  .back-text h2 {
+    font-size: 2rem;
+    color: #d84040;
+    margin-bottom: 10px;
+  }
+}

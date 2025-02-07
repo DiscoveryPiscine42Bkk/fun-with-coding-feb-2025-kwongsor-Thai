@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("../photo/bg2.gif") no-repeat center center fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  background-color: #1d1616;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.navbar li a {
+  padding: 5px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #d84040;
+  margin: 0 10px;
+}
+
+.contact {
+  display: flex;
+  align-items: left;
+  padding: 20px 0;
+  margin-left: 42%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 100px;
+}
+
+.contact-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.icon-container img {
+  cursor: pointer;
+}
+
+/* สำหรับหน้าจอที่มีความกว้างไม่เกิน 768px (เช่น โทรศัพท์มือถือ) */
+@media screen and (max-width: 768px) {
+  /* ปรับการจัดเรียงให้เป็นแนวตั้ง */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ทำให้ container ที่ใช้แสดงคำว่า About และ Me ปรับตัว */
+  .container {
+    width: 100%;
+    text-align: center; /* จัดข้อความให้เป็นกึ่งกลาง */
+    padding: 20px 0;
+  }
+
+  .container a h2 {
+    font-size: 1.5rem; /* ลดขนาดตัวอักษรใน mobile */
+    padding: 10px;
+  }
+
+  /* ให้แน่ใจว่าคำว่า About และ Me จะไม่ถูกซ้อนทับหรือตกลงมา */
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* ทำให้คำว่า Contact อยู่กึ่งกลาง */
+  }
+
+  .icon-container {
+    flex-direction: column; /* เปลี่ยนแนวการจัดเรียงไอคอนให้เป็นแนวตั้ง */
+    gap: 15px; /* เพิ่มช่องว่างระหว่างไอคอน */
+  }
+
+  .contact-text {
+    text-align: center; /* ทำให้ข้อความอยู่กึ่งกลาง */
+    font-size: 1.2rem;
+  }
+}

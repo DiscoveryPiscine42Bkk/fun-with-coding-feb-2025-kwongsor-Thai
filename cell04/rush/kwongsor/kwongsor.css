@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: whitesmoke;
+  background-image: url("../photo/background.jpg");
+  background-position: fixed;
+}
+
+nav {
+  width: 100%;
+  /* background-color: #32cd32; */
+  /* background-color: azure; */
+  background-color: #8a2be2;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.navbar li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.about-me-title {
+  position: relative;
+  top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-me-title h2 {
+  color: black;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+#about-me {
+  display: flex;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.img-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.img-container img {
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+  transform: scale(1.2);
+}
+
+.about-me-text {
+  width: 45%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: grey;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.about-me-text p {
+  line-height: 3;
+  font-size: 1.2em;
+  color: white;
+  font-weight: lighter;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+#education img {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+#education img:hover {
+  transform: scale(1.2);
+}
+
+.school {
+  display: flex;
+  padding: 50px 0;
+}
+
+.school-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+#certificate {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 200px;
+}
+
+#certificate h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 100px;
+}
+
+.certificate-container {
+  display: flex;
+  flex-wrap: wrap; /* ห่อรูป */
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px; /* กำหนดขนาดสูงสุด */
+}
+
+.certificate-item {
+  width: 30%; /* กำหนดขนาดของแต่ละรูป */
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-item img:hover {
+  transform: scale(1.2); /* ขยายรูปเมื่อ hover */
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+  padding-bottom: 50px;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.container a {
+  text-decoration: none;
+  color: #8a2be2;
+  background-color: #32cd32;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.container a:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  /* ปรับการจัดตำแหน่งของ navbar */
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ปรับขนาดตัวอักษรในหัวข้อ */
+  .about-me-title h2 {
+    font-size: 2rem;
+  }
+
+  /* ปรับขนาดรูปภาพใน section About Me */
+  #about-me {
+    display: block;
+    text-align: center;
+  }
+
+  .img-container {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .img-container img {
+    width: 80%;
+    height: auto;
+  }
+
+  .about-me-text {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  /* ปรับขนาดรูปภาพใน Education */
+  #education .school {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #education img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* ปรับขนาดรูปใน certificate */
+  .certificate-item {
+    width: 45%;
+  }
+
+  .certificate-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* เพิ่มระยะห่างระหว่างแต่ละ link ใน Contact */
+  .container {
+    padding: 50px 0;
+  }
+
+  .container a {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
